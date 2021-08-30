@@ -1,0 +1,165 @@
+<codeup>
+
+-----------------------출력문 
+
+1002 
+public class Main{
+    public static void main (String[] args) {
+        System.out.println("Hello"+" "+"World");
+    }
+}
+
+or
+
+
+1002 
+public class Main{
+    public static void main (String[] args) {
+        System.out.println("Hello World");
+    }
+}
+
+
+1003
+public class Main{
+    public static void main (String[] args) {
+        System.out.println("Hello\nWorld");
+    }
+}
+
+1004
+다음 문장을 출력하시오.
+'Hello'
+public class Main{
+    public static void main (String[] args) {
+        System.out.println("\'Hello\'");
+    }
+}
+
+1005 "Hello World" 출력 
+public class Main{
+    public static void main (String[] args) {
+        System.out.println("\"Hello World\"");
+    }
+}
+
+1006 "!@#$%^&*()" 출력 
+public class Main{
+    public static void main (String[] args) {
+        System.out.println("\"!@#$%^&*()\"");
+    }
+}
+
+1007 "C:\Download\hello.cpp"
+public class Main{
+    public static void main (String[] args) {
+        System.out.println("\"C:\\Download\\hello.cpp\"");
+    }
+}
+
+1008
+┌┬┐
+├┼┤
+└┴┘
+public class Main{
+    public static void main (String[] args) {
+        System.out.println("\u250C\u252C\u2510\n\u251C\u253C\u2524\n\u2514\u2534\u2518");
+    }
+}
+
+
+
+---------------------------입출력문 및 연산자 
+1010
+//		int num = 1;
+//		System.out.println(num);
+---------->문제를 잘못 이해
+->내가 다시 푼 답.
+import java.util.Scanner;
+public class Main{
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(num);
+    }
+}
+
+printf()
+%d : 정수 
+%f : 실수 
+%c : 문자 
+%s : 문자열
+
+
+1011-----
+    Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		System.out.println(str);
+
+ next()는문자열 받음 (공백기준)
+ nextInt()는정수를 받음.
+ nextLine() 문자열(엔터기준)
+
+
+
+1012-----------문자열에만 집중해서 string으로 입출력해서 틀렸다.
+char로 변환해주자.
+
+    import java.util.Scanner;
+
+public class Main{
+    public static void main (String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+// 또는 char c = sc.nextLine().charAt(0);  //0번째 인덱스의 문자를 char타입으로 바꿔줌.(특정문자위치추출)
+        char c = str.charAt(0);
+
+            System.out.println(c);       
+    }
+}
+
+-- charAt(0);   : 0번째 인덱스의 문자를 char타입으로 바꿔줌.(특정문자위치추출)
+->123을 입력하면 0번째 인덱스인 1만 출력이 된다. ->for 문 이용해서 전부 다 출력해 줄 수 있음.
+
+
+
+1013------------------------------------------------
+	  //Scanner sc = new Scanner(System.in);
+		//float f = sc.nextFloat(); 
+		//System.out.println(f);
+
+--> 다시 푼 정답
+	  Scanner sc = new Scanner(System.in);
+		float f = sc.nextFloat();
+		System.out.printf(String.format("%.6f", f)); //소숫점 자릿수를 맞춰준다.
+   오답이유: 1.1 를 입력하면 1.100000 가 아니라 1.1이 출력됨.
+      해결: 자릿수를 맞춰준다. string.format을 이용한다.
+//
+ ** . float은 7자리, double은 15~16자리 까지 오차없이 표현할 수 있음. 
+-> 따라서 %.6f라고 작성해준다. 
+ ***String.format
+1. %d (= Integer Formatting)
+2. %s (= String Formatting)
+3. %f (= Floating point Formatting) 실수형
+4. %t (= DateTime Formatting)
+
+1014------------------------------------------------
+정수(int) 2개를 입력받아 그대로 출력해보자.
+나의 맨처음 풀이
+Scanner sc = new Scanner(System.in);
+//		
+//		int n = sc.nextInt();
+//		int m = sc.nextInt();
+//
+//		System.out.println(n);
+//		System.out.println(m);
+------------> 두번째 풀이 
+
+Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		
+		System.out.println(n +" "+ m);
+-->출력 방식에만 다르지 문제는 제대로 푼 것 같다
