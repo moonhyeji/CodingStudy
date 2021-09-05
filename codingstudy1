@@ -163,3 +163,37 @@ Scanner sc = new Scanner(System.in);
 		
 		System.out.println(n +" "+ m);
 -->출력 방식에만 다르지 문제는 제대로 푼 것 같다
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------
+
+-------------------------------------1019
+Scanner sc = new Scanner(System.in);
+     
+     
+     int a = sc.nextInt();
+     int b = sc.nextInt();
+     int c =sc.nextInt();
+    		
+     System.out.printf("%04d년%02d월%02d일", a,b,c);
+
+
+------------------------------------------------
+
+-------------------------------1583
+Scanner sc = new Scanner(System.in);
+     int num = sc.nextInt();
+     if(num%2 == 0) {
+    	 System.out.println("even");
+     }else {
+    	 System.out.println("odd");
+     }
